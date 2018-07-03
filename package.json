@@ -2,6 +2,7 @@
   "name": "vidcaller",
   "version": "0.0.1",
   "description": "A simple video caller using webrtc",
+  "main": "local/server",
   "scripts": {
     "start": "node local/server"
   },

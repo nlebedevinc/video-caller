@@ -1,13 +1,15 @@
-var express = require('express');
+const express = require('express');
+const path = require('path');
 
-var server = express();
-server.use('/src', express.static(__dirname + '/src'));
+
+const server = express();
+server.use('/src', express.static(path.resolve(__dirname + '/../src')));
 
 server.get('/*', function(req, res){
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(path.resolve(__dirname + '/../index.html'));
 });
 
-var port = 8000;
+const port = 8000;
 server.listen(port, function() {
     console.log('server listening on port ' + port);
 });
