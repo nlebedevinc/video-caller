@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Caller - a video chat app</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script src="https://webrtc.github.io/adapter/adapter-4.2.2.js"></script>
+    <script src="./src/js/nav.js"></script>
+    <script src="./src/js/video.js"></script>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1><a href="/">Video Caller</a></h1>
+        <h2><a href="/">a video chat app</a></h2>
+    </header>
+
+    <div id="invite" class="row">
+        <div class="col-md-auto align-self-center">
+            <div class="input-group mb-3">
+                <input id="create-room-input" type="text" class="form-control" placeholder="Room ID" aria-label="Room name" required>
+                <div class="input-group-append">
+                    <button id="create-room-btn" class="btn btn-outline-secondary" type="button">Create Room</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-md-auto align-self-center">
+            <div id="url" class="alert alert-dark" role="alert">
+                <span id="roomIntro">ROOM URL</span>: <span id="roomUrl"></span>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+
+    <div id="room" class="row">
+        <div class="col-md-6">
+            <div class="videoContainer">
+                <video id="selfVideo" oncontextmenu="return false;"></video>
+                <meter id="localVolume" class="volume" min="-45" max="-20" high="-25" low="-40"></meter>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Hacked by <a href="">@nickylebedev</a>.</p>
+</footer>
+
+<script>
+    start()
+</script>
+</body>
+</html>

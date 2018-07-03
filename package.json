@@ -1,0 +1,12 @@
+{
+  "name": "vidcaller",
+  "version": "0.0.1",
+  "description": "A simple video caller using webrtc",
+  "scripts": {
+    "start": "node local/server"
+  },
+  "author": "",
+  "devDependencies": {
+    "express": "^4.16.3"
+  }
+}
